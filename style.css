@@ -437,6 +437,7 @@ img#dark{
 	position: relative;
 }
 ul.bubbles{
+	width:.9rem;
 	position:relative;
 	padding-top:120px;
 	left:8%;
@@ -498,6 +499,20 @@ details ul li a{
 	text-decoration:none;
 	color:white;
 	margin:9px;
+}
+
+footer#bottom {
+	position:fixed;
+	background-color: gray;
+	color: var(--cream);
+	font-family: 'Sixtyfour',sans-serif;
+	height:2.2vh;
+	font-size:.8rem;
+	padding-top:11px;
+	text-align:center;
+	bottom:0;
+	width:100vw;
+
 }
 
 @media only screen and (max-width: 600px){

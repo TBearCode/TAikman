@@ -1,3 +1,4 @@
+//Makes dark theme toggled and animation play on svg when it is clicked
 const qdot = document.querySelector("#dot");
 const html = document.querySelector("html");
 const div = document.querySelector("#qmark");
