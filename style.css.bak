@@ -1,0 +1,349 @@
+:root{
+--lg:#ADBC9F;
+--black:#070707;
+--gray:#080808;
+--green:#436850;
+--dg:#12372A;
+--cream:#FBFADA;
+}
+
+* {
+	padding: 0%;
+	margin: 0%;
+}
+body{
+	background: linear-gradient(0deg, var(--black),var(--dg));
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+#Contact{
+	background-color:var(--cream);
+	transition-property: background-color;
+	transition-duration:3s;
+}
+nav {
+	align-items:center;
+	justify-content:space-around;
+	background-color: var(--green);
+	box-shadow: 0px 5px var(--gray);
+	display:flex;
+	height:4.2em;
+}
+
+body#error {
+	border:0;
+	margin:0px;
+	background-repeat: no-repeat;
+	background-size:100vmax;
+	background-image: url("ghibli.jpg");
+	width: 100vw;
+	background-repeat: no-repeat;
+}
+form {
+	align-items:center;
+}
+
+button:hover{
+	color:blue;
+	transition-duration:.5s;
+	transition-timing-function: ease;
+	padding-right:5em;
+	margin-right:2em;
+	text-align: center;
+	position: relative;
+}
+h3 {
+	text-align:center;
+	
+}
+p {
+	text-align:center;
+}
+a.navigation:hover {
+	color:var(--cream);
+	transition-duration:.5s;
+	transition-timing-function: ease;
+	text-decoration: underline;
+	text-underline-offset:1rem;
+}
+ a.navigation {
+	color:var(--black);
+	font-family: 'Sixtyfour'; font-size: 15px;
+	text-decoration:none;
+
+
+}
+a.navigation h1:hover{
+	color:var(--black);
+	transition-duration:0.5s;
+	transition-timing-function:ease;
+}
+a.navigation:visited{
+	
+}
+h1{
+	color:var(--cream);
+	font-family: 'Sixtyfour'; font-size 28px;
+}
+
+ul.navigation{
+	list-style:none;
+	gap: 1.5rem;
+	display:flex;
+}
+
+section#heading{
+	text-size:.8rem;
+	text-align:center;
+	padding:12px;
+	margin:8px;
+	font-family: 'Sixtyfour', sans-serif;
+	color: var(--black);
+	-webkit-text-stroke: 1px var(--lg);
+}
+img {
+	width:100%;
+	height:100%;
+	display:block;
+	object-fit:cover;
+}
+
+.gallery{
+	padding-top:12px;
+	display:grid;
+	list-style-type:none;
+	margin: 9px;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-auto-flow: dense;
+	grid-auto-rows: 35rem;
+}
+
+figure{
+	align-items:center;
+	margin:0px;
+	width:100%;
+	height:100%;
+	position:relative;
+	float:left;
+	transform: scale(.9);
+	box-shadow: 8px 6px rgba(0,12,0,0.85);
+}
+
+.gallery figcaption{
+	position:absolute;
+	color: white;
+	font-size: 1rem; 
+	font-family: 'Sixtyfour', sans-serif;
+	opacity:0;
+	inset:0;
+	padding:4rem 2.5rem;
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 2rem;
+	transition: opacity .3s ease-in-out 
+}
+.gallery figure a {
+	text-align:center;
+	text-decoration: none;
+	color: white;
+	z-index:2;
+}
+.gallery figure a:hover{
+	transition: color .3s ease-in-out;
+	color: var(--cream);
+}
+.gallery figcaption main{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 2rem;
+}
+.gallery figcaption footer{
+	display: flex;
+	flex-direction: column;
+	text-align:center;
+	font-size: .8rem;
+	gap: 2.8rem;
+}
+
+.gallery figure:hover figcaption{
+	background: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #151618 80%);
+	opacity:.8;
+	transition-property: opacity;
+	transition-duration: .5s;
+	transition-timing-function:ease-in-out;
+}
+
+div.landing{
+	position:relative;
+	display:flex;
+	justify-content:center;
+}
+figure.landing{
+	display:flex;
+	margin:0px;
+	box-shadow: 0px 0px;
+	padding-top:80px;
+}
+figure.landing figcaption{
+	color:white; 
+	text-size: 2rem;
+	font-family: 'Sixtyfour', sans-serif;
+	width:300%;
+}
+figure.landing figcaption, figure.landing img {
+	position:relative;
+	box-shadow:0px 0px;
+}
+figure.landing a img {
+	width:80%;
+	border-radius:100%;
+	padding-right:13px;
+}
+a#contact_link {
+	color: white;
+	text-decoration: none;
+}
+a#contact-link:hover {
+	 transition: color .3s ease-in-out;
+         color: var(--cream);
+}
+div#qmark {
+	justify-content:center;
+	align-items:center;
+	position:relative;
+	padding-top: 45px;
+	display:flex;
+	flex-direction:column;
+
+}
+div#qmark.changed{
+	width:100vw;;
+	height:100vh;
+}
+svg#mark{
+	stroke-dasharray: 359;
+	width: 25%;
+	height: 25%;
+}
+svg#dot{
+	width: 8%;
+	height: 9%;
+}
+svg#dot:hover{
+	animation: .1s rattle linear;
+}
+svg#dot.clicked{
+	animation: 5s grow linear;
+	width: 900%;
+	height:900%;
+}
+
+@keyframes grow{
+	0%{ 
+		width:8%;
+		height: 9%;
+	}
+	100%{
+		width:900%;
+		height:900%;
+	}
+
+}
+@keyframes earth{
+	0%{
+		transform: rotate(0deg);
+	} 
+	100%
+	{
+		transform: rotate(360deg);
+	}
+}
+@keyframes rattle{
+	0%{
+		transform: translate(0px);
+	}
+	25%{
+		transform: translate(-.5rem);
+	}
+	50%{
+		transform: translate(.5rem);
+	}
+	75%{
+		transform: translate(.5rem);
+	}
+	100%{
+		transform: translate(-.5rem);
+	}
+}
+ul.personal{
+	padding-top:12px;
+	display:grid;
+	list-style-type:none;
+	margin: 50px;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	grid-auto-flow: dense;
+	grid-auto-rows: 35rem;
+}
+ul.personal li{
+	position:relative;
+}
+ul.personal li:hover{
+	position:relative;
+}
+div.personal{
+	height:100px;
+	position:relative;
+	transform:scale(0.7);
+	transition-property: transform;
+	transition-duration: .75s;
+	transition-timing-function: ease-in-out;
+	transition-delay:.2s;
+	display:flex;
+}
+div.personal figure img{
+	transform:scale(1.3);
+	transition-property: transform;
+	transition-delay:.2s;
+	transition-duration:.65s;
+	position:relative;
+}
+div.personal.opened{
+	transform:scale(1.6);
+	z-index: 1;
+}
+div.personal.opened figure img{
+	transform:scale(1);
+}
+div.personal figure{
+	transition-delay:.2s;
+	overflow:hidden;
+	transform:translatex(0px);
+	transition-property:transform;
+	position:relative;
+	transition-duration:1s;
+}
+div.personal figure figcaption{
+	box-shadow: 2px 2px var(--dg);
+	color: var(--cream);
+	font-family: 'Sixtyfour',sans-serif;
+	margin:9px;
+}
+div#bkgrnd:hover figure{
+	transform: translatex(5vw);
+	position:relative;
+}
+div#goals:hover figure{
+	transform: translatex(-5vw);
+	position:relative;
+}
+div#experience:hover figure{
+	transform: translatex(-6vw);
+	position:relative;
+}
+div#hobbies:hover figure{
+	transform: translatex(6vw);
+	position:relative;
+}
