@@ -437,10 +437,10 @@ img#dark{
 	position: relative;
 }
 ul.bubbles{
-	width:.9rem;
 	position:relative;
 	padding-top:120px;
-	left:8%;
+	align-items:center;
+	margin-left:10%;
 	display:grid;
 	list-style-type:none;
 	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
